@@ -8,20 +8,45 @@
         <h1 class="text-2xl">Share your work with us</h1>
     </div>
 
+    <form action="#">
     <div class="flex justify-between space-x-1">
         <div>
             <label for="first_name" class="mb-1 inline-block">First Name</label>
-            <input type="text" class="border-2 rounded-lg w-full p-2" name="first_name" id="first_name">
+            <input type="text"
+                   class="border-2 rounded-lg w-full p-2"
+                   name="first_name"
+                   id="first_name"
+                   wire:model.defer="state.first_name"
+            >
+            @error('state.first_name')
+            <div class='text-red-500 text-sm mt-2'>
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div>
             <label for="last_name" class="mb-1 inline-block">Last Name</label>
-            <input type="text" class="border-2 rounded-lg w-full p-2" name="last_name" id="last_name">
+            <input type="text"
+                   class="border-2 rounded-lg w-full p-2"
+                   name="last_name"
+                   id="last_name"
+                   wire:model.defer="state.last_name"
+            >
+            @error('state.last_name')
+            <div class='text-red-500 text-sm mt-2'>
+                {{ $message }}
+            </div>
+            @enderror
         </div>
     </div>
 
     <div>
         <label for="shop_category" class="mb-1 inline-block">Your Shop Category</label>
-        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" name="shop_category" id="shop_category">
+        <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                name="shop_category"
+                id="shop_category"
+                wire:model.defer="state.shop_category"
+        >
             <option value="">Select Category</option>
             <option value="Graphics">Graphics</option>
             <option value="Fonts">Fonts</option>
@@ -31,6 +56,12 @@
             <option value="Web Themes">Web Themes</option>
             <option value="3D">3D</option>
         </select>
+
+        @error('state.shop_category')
+        <div class='text-red-500 text-sm mt-2'>
+            {{ $message }}
+        </div>
+        @enderror
     </div>
 
     <div class="">
@@ -78,6 +109,9 @@
     </div>
     <div class="mt-6 flex justify-between">
         <div></div>
-        <button class="text-white text-md bg-teal-600 hover:bg-teal-800 px-10 py-4">Next</button>
+        <button class="text-white text-md bg-teal-600 hover:bg-teal-800 px-10 py-4"
+            wire:change.prevent="submit"
+        >Next</button>
     </div>
+    </form>
 </div>
