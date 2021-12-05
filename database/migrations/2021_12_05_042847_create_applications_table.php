@@ -18,8 +18,9 @@ class CreateApplicationsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('shop_category');
-            $table->string('shop_url');
+            $table->string('portfolio_link')->unique();
             $table->string('content_confirmation');
+            $table->boolean('has_stores');
             $table->string('online_stores');
             $table->string('quality_perspective');
             $table->string('seller_experience');
