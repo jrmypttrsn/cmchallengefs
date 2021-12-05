@@ -15,9 +15,6 @@
         </a>
     </div>
 </nav>
-@php
-echo 'Current PHP version: ' . phpversion();
-@endphp
 <div class="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">
     <div class="flex items-center justify-center min-h-screen">
 {{--        <div class="max-w-2xl mx-auto">--}}

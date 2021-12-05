@@ -15,6 +15,15 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('shop_category');
+            $table->string('shop_url');
+            $table->string('content_confirmation');
+            $table->string('online_stores');
+            $table->string('quality_perspective');
+            $table->string('seller_experience');
+            $table->string('marketing_understanding');
             $table->timestamps();
         });
     }
