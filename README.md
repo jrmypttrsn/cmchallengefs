@@ -6,6 +6,11 @@ _Caveats (as communication is #1)_
 
 -   DB would likely have user id (if continuing same pattern of having an account in order to apply for a shop). I didn't include this on purpose as authentication was specifically mentioned as not needed in the brief.
 -   Tailwind was used just to get things up and running quickly, and get the frontend close to Figma mockup. Once the form was functioning properly I would create form components and style as is outlined in the Figma file.
+
+###TODO:
+
+-   refactor dropdown values to CONST in model?
+-   step 3/confirmation message
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
