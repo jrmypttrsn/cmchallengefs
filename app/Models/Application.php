@@ -13,9 +13,10 @@ class Application extends Model
         'first_name',
         'last_name',
         'shop_category',
-        'shop_url',
+        'portfolio_link',
         'content_confirmation',
-        'applicant_online_stores',
+        'has_stores',
+        'online_stores',
         'quality_perspective',
         'seller_experience',
         'marketing_understanding'

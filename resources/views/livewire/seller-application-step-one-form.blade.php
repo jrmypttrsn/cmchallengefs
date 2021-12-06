@@ -11,7 +11,7 @@
     <form action="#">
     <div class="flex justify-between space-x-1">
         <div>
-            <label for="first_name" class="mb-1 inline-block">First Name</label>
+            <label for="first_name" class="mb-1 font-semibold inline-block">First Name</label>
             <input type="text"
                    class="border-2 rounded-lg w-full p-2"
                    name="first_name"
@@ -25,7 +25,7 @@
             @enderror
         </div>
         <div>
-            <label for="last_name" class="mb-1 inline-block">Last Name</label>
+            <label for="last_name" class="mb-1 font-semibold inline-block">Last Name</label>
             <input type="text"
                    class="border-2 rounded-lg w-full p-2"
                    name="last_name"
@@ -41,7 +41,7 @@
     </div>
 
     <div>
-        <label for="shop_category" class="mb-1 inline-block">Your Shop Category</label>
+        <label for="shop_category" class="mb-1 font-semibold inline-block">Your Shop Category</label>
         <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
                 name="shop_category"
                 id="shop_category"
@@ -66,12 +66,17 @@
 
     <div class="">
         <div>
-            <label for="portfolio_link" class="mb-1 inline-block">Portfolio Link</label>
+            <label for="portfolio_link" class="mb-1 font-semibold inline-block">Portfolio Link</label>
             <input type="text"
                    class="border-2 rounded-lg w-full p-2"
                    name="portfolio_link" id="portfolio_link"
                    wire:model="state.portfolio_link"
             >
+            @error('state.portfolio_link')
+            <div class='text-red-500 text-sm mt-2'>
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div class="relative flex items-start mt-2">
             <div class="flex items-center h-5">
@@ -90,7 +95,7 @@
     </div>
     <div class="">
         <div>
-            <label class="text-sm font-medium text-gray-900">Do you already have an online store?</label>
+            <label class="text-sm font-semibold text-gray-900">Do you already have an online store?</label>
             <fieldset class="mt-4">
                 <div class="space-y-4">
                     <div class="flex items-center">
@@ -111,7 +116,7 @@
         </div>
     </div>
     <div class="">
-        <label for="online_stores" class="inline-block text-sm font-medium text-gray-900">Online stores I sell on today</label>
+        <label for="online_stores" class="inline-block text-sm font-semibold text-gray-900">Online stores I sell on today</label>
         <div class="mt-1">
             <textarea rows="4"
                       name="online_stores"

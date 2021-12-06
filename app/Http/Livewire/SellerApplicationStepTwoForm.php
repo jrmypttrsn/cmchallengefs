@@ -9,9 +9,9 @@ class SellerApplicationStepTwoForm extends Component
     public $state = [];
 
     protected $rules = [
-        'state.quality_perspective',
-        'state.seller_experience',
-        'state.marketing_understanding'
+        'state.quality_perspective' => 'required',
+        'state.seller_experience' => 'required',
+        'state.marketing_understanding' => 'required'
     ];
 
     protected $messages = [

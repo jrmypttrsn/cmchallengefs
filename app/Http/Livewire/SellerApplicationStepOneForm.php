@@ -11,13 +11,16 @@ class SellerApplicationStepOneForm extends Component
     protected $rules = [
         'state.first_name' => 'required',
         'state.last_name' => 'required',
-        'state.shop_category' => 'required'
+        'state.shop_category' => 'required',
+        'state.portfolio_link' => 'unique:applications,portfolio_link'
     ];
 
     protected $messages = [
         'state.first_name.required' => 'A first name is required.',
         'state.last_name.required' => 'A last name is required.',
-        'state.shop_category.required' => 'A shop category is required.'
+        'state.shop_category.required' => 'A shop category is required.',
+        'state.portfolio_link.unique' =>
+            'A shop with this portfolio link has already been submitted.'
     ];
 
     public function updatedState()
