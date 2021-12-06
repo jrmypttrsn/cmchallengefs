@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*html {*/
-/*    background: url('/images/bg-pattern.png') no-repeat;*/
-/*    width: 1443px;*/
-/*    height: 591px;*/
-/*    position: absolute;*/
-/*    left: -2px;*/
-/*    bottom: 0px;*/
-/*}*/
-.bg-image {
-    background-image: url("/images/bg-pattern.png");
-    width: 1443px;
-    height: 591px;
-    position: absolute;
-    left: -2px;
-    top: 0;
-}
 
 nav .cm-script {
     width: 114px;
