@@ -9,7 +9,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
     @livewireStyles
 </head>
-<body class="antialiased font-sans overflow-hidden" style="background-image: url('/images/bg-pattern.png')">
+<body class="antialiased font-sans overflow-hidden">
 <nav class="bg-white-200 text-gray-800 shadow-md md:shadow-none">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
