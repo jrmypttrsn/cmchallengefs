@@ -47,13 +47,9 @@
                     wire:model="state.shop_category"
             >
                 <option value="">Select Category</option>
-                <option value="Graphics">Graphics</option>
-                <option value="Fonts">Fonts</option>
-                <option value="Templates">Templates</option>
-                <option value="Add-ons">Add-ons</option>
-                <option value="Photos">Photos</option>
-                <option value="Web Themes">Web Themes</option>
-                <option value="3D">3D</option>
+                @foreach(\App\Models\Application::SHOP_CATEGORIES as $key => $value)
+                    <option value="{{ $value }}">{{ $key }}</option>
+                @endforeach
             </select>
 
             @error('state.shop_category')
