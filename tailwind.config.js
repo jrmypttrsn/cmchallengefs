@@ -8,7 +8,9 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        fontFamily: {
+            sans: ["Helvetica", "sans-serif"],
+        },
         colors: {
             transparent: "transparent",
             current: "currentColor",
@@ -36,6 +38,7 @@ module.exports = {
             rose: colors.rose,
             white: colors.white,
         },
+        extend: {},
     },
     variants: {
         extend: {},
