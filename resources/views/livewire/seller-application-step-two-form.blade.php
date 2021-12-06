@@ -19,11 +19,9 @@
                     wire:model="state.quality_perspective"
             >
                 <option value="">Select Answer</option>
-                <option value="I don’t care what it takes, my products are the highest quality possible">I don’t care what it takes, my products are the highest quality possible</option>
-                <option value="I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere">I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere</option>
-                <option value="I try to get quality products out quickly, even if I need to take a shortcut now and then">I try to get quality products out quickly, even if I need to take a shortcut now and then</option>
-                <option value="I spend the minimum amount of time & effort it takes to create products that are acceptable quality.">I spend the minimum amount of time & effort it takes to create products that are acceptable quality.</option>
-                <option value="Quantity is more important to me than quality.">Quantity is more important to me than quality.</option>
+                @foreach(\App\Models\Application::QUALITY_PERSPECTIVES as $key => $value)
+                    <option value="{{ $value }}">{{ $key }}</option>
+                @endforeach
             </select>
             @error('state.quality_perspective')
             <div class='text-red-500 text-sm mt-2'>
@@ -39,11 +37,9 @@
                     wire:model="state.seller_experience"
             >
                 <option value="">Select Answer</option>
-                <option value="I sell on multiple marketplaces and through my own website">I sell on multiple marketplaces and through my own website</option>
-                <option value="I have experience selling through only my own website">I have experience selling through only my own website</option>
-                <option value="I have experience selling through multiple marketplaces">I have experience selling through multiple marketplaces</option>
-                <option value="I have experience selling through one online marketplace">I have experience selling through one online marketplace</option>
-                <option value="I’m new to selling creative products online">I’m new to selling creative products online</option>
+                @foreach(\App\Models\Application::SELLER_EXPERIENCE as $key => $value)
+                    <option value="{{ $value }}">{{ $key }}</option>
+                @endforeach
             </select>
             @error('state.seller_experience')
             <div class='text-red-500 text-sm mt-2'>
@@ -59,10 +55,9 @@
                     wire:model="state.marketing_understanding"
             >
                 <option value="">Select Answer</option>
-                <option value="I have an extensive background in business and/or marketing">I have an extensive background in business and/or marketing</option>
-                <option value="I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work">I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work</option>
-                <option value="I’m vaguely aware of basic business & marketing concepts">I’m vaguely aware of basic business & marketing concepts</option>
-                <option value="I’m not interested in understanding business & marketing">I’m not interested in understanding business & marketing</option>
+                @foreach(\App\Models\Application::MARKETING_UNDERSTANDING as $key => $value)
+                    <option value="{{ $value }}">{{ $key }}</option>
+                @endforeach
             </select>
             @error('state.marketing_understanding')
             <div class='text-red-500 text-sm mt-2'>
