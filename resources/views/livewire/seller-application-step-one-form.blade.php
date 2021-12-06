@@ -8,7 +8,7 @@
         <h1 class="text-2xl">Share your work with us</h1>
     </div>
 
-    <form action="#">
+    <form action="#" x-data="{ selected: 'opt2' }">
     <div class="flex justify-between space-x-1">
         <div>
             <label for="first_name" class="mb-1 font-semibold inline-block">First Name</label>
@@ -92,21 +92,36 @@
                 <label for="content_confirmation" class="font-medium text-gray-700">Yes, I confirm that the content I submit is authored by me.</label>
             </div>
         </div>
+        @error('state.content_confirmation')
+        <div class='text-red-500 text-sm mt-2'>
+            {{ $message }}
+        </div>
+        @enderror
     </div>
-    <div class="">
+    <div class="mt-6">
         <div>
             <label class="text-sm font-semibold text-gray-900">Do you already have an online store?</label>
             <fieldset class="mt-4">
                 <div class="space-y-4">
                     <div class="flex items-center">
-                        <input id="yes" name="has_stores" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        <input id="yes"
+                               name="has_stores"
+                               type="radio"
+                               class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                               x-on:click="selected = 'opt1'"
+                        >
                         <label for="yes" class="ml-3 block text-sm font-medium text-gray-700">
                             Yes
                         </label>
                     </div>
 
                     <div class="flex items-center">
-                        <input id="no" name="has_stores" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        <input id="no"
+                               name="has_stores"
+                               type="radio"
+                               class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                               x-on:click="selected = 'opt2'"
+                        >
                         <label for="no" class="ml-3 block text-sm font-medium text-gray-700">
                             No
                         </label>
@@ -115,7 +130,7 @@
             </fieldset>
         </div>
     </div>
-    <div class="">
+    <div class="" x-show="selected !== 'opt2'" x-cloak>
         <label for="online_stores" class="inline-block text-sm font-semibold text-gray-900">Online stores I sell on today</label>
         <div class="mt-1">
             <textarea rows="4"

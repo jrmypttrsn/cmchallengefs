@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Seller Application</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
     @livewireStyles
 </head>
 <body class="antialiased font-sans overflow-hidden">
